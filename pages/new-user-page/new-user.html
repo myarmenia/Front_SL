@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Dashboard - NiceAdmin Bootstrap Template</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="../../assets/img/favicon.png" rel="icon" />
+    <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <!-- <link href="https://fonts.gstatic.com" rel="preconnect" /> -->
+    <!-- <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="../../assets/vendor/fonts/fonts.googleapis.css" />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="../../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../assets/vendor/boxicons/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="../../assets/vendor/quill/quill.snow.css" rel="stylesheet" />
+    <link href="../../assets/vendor/quill/quill.bubble.css" rel="stylesheet" />
+    <link href="../../assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link
+      href="../../assets/vendor/simple-datatables/style.css"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS Files -->
+    <link href="../../assets/css/main/style.css" rel="stylesheet" />
+    <link href="../../assets/css/main/index.css" rel="stylesheet" />
+    <link href="../../assets/css/main/input-date.css" rel="stylesheet" />
+    <link href="../../assets/css/main/upload-file.css" rel="stylesheet" />
+    <link href="../../assets/css/main/select.css" rel="stylesheet" />
+    <link href="../../assets/css/main/input.css" rel="stylesheet" />
+    <!-- Current page's CSS -->
+    <link href="../../assets/css/other/new-user.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../new-user-page/new-user.css">
+  </head>
+
+  <body class="toggle-sidebar">
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+      <ul class="sidebar-nav" id="sidebar-nav">
+        <!-- <li class="nav-item">
+          <a class="nav-link collapsed" href="index.html">
+            <i class="bi bi-grid"></i>
+            <span>Users</span>
+          </a>
+        </li> -->
+
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            data-bs-target="#components-nav"
+            data-bs-toggle="collapse"
+            href="#"
+          >
+            <i class="bi bi-menu-button-wide" title="Կարգավորումներ"></i><span>Կարգավորումներ</span
+            ><i class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul
+            id="components-nav"
+            class="nav-content collapse"
+            data-bs-parent="#sidebar-nav"
+          >
+            <li>
+              <a href="components-alerts.html">
+                <i class="bi bi-person" title="Օգտատերեր"></i><span>Օգտատերեր</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-alerts.html">
+                <i class="bi bi-person-gear" title="Դերեր"></i><span>Դերեր</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            data-bs-target="#components-nav1"
+            data-bs-toggle="collapse"
+            href="#"
+          >
+            <i class="bi bi-menu-button-wide" title="Տվյալներրի մուտք"></i><span>Տվյալներրի մուտք</span
+            ><i class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul
+            id="components-nav1"
+            class="nav-content collapse"
+            data-bs-parent="#sidebar-nav"
+          >
+            <li>
+              <a href="components-alerts.html">
+                <i class="bi bi-person" title="Անձեր"></i><span>Անձեր</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- End Components Nav -->
+
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            data-bs-toggle="collapse"
+            href="#"
+          >
+            <i class="bi bi-card-checklist" title="Տվյալներրի մուտքագրում Ֆայլերի միջոցով"></i><span>Տվյալներրի մուտքագրում</span>
+          </a>
+        </li>
+
+        <!-- End file upload Page Nav -->
+      </ul>
+    </aside>
+    <!-- End Sidebar-->
+    <div class="nav-top">
+        <div class="toggle-sidebar-btn-wrapper">
+           <i class="bi bi-list toggle-sidebar-btn"></i>
+        </div>
+        <div class="nav-top-right">
+            <div class="log-out-div">
+                <span class="log-out-icon"><i class="bi bi-person"></i></span>
+                <div class="log-out-block">
+                    <div class="user">
+                      <h3>Անուն Ազգանուն</h3>
+                      <span>Ադմինիստրատոր</span>
+                    </div>
+                    <a href="#">
+                      <i class="bi bi-box-arrow-right"></i>
+                      Դուրս Գալ
+                    </a>
+                </div>
+            </div>
+            <select class="form-select" name="select" id="select">
+              <option value="arm">Հայերեն</option>
+              <option value="rus">Руский</option>
+          </select>
+        </div>
+    </div>
+    <!-- end nav-top -->
+    <main id="main" class="main">
+      <div class="pagetitle-wrapper">
+        <div class="pagetitle">
+          <h1>Անձ</h1>
+          <nav>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <!-- End Page Title -->
+
+      <section class="section">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Form</h5>
+
+            <!-- Vertical Form -->
+            <form class="form">
+              <div class="inputs row g-3">
+               
+                
+                <div
+                class="col d-flex align-items-center gap-3 modal-toggle-box flex-wrap my-date-class"
+                >
+                <span class="form-label">Մուտքագրման ամսաթիվ</span>
+                
+                <span>19-09-2023</span>
+                </div>
+
+                <div
+                class="col d-flex align-items-center gap-3 modal-toggle-box flex-wrap my-date-class"
+                >
+                <span class="form-label">Մուտքագրման Ժամ</span>
+                
+                <span>11։05։56</span>
+                </div>
+                <!-- To open modal """fullscreenModal""" -->
+                <div class="col">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="item1"
+                      placeholder=""
+                      data-id="1"
+                      value=""
+                    />
+                    <i
+                    class="bi bi-plus-square-fill icon icon-base my-plus-class"
+                    data-bs-toggle="modal"
+                    data-bs-target="#fullscreenModal"
+                    data-url="url/1"
+                  ></i>
+                    <label for="item1" class="form-label"
+                      >Տեղեկատվություն տրամադրող մարմին</label
+                    >
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="item2"
+                      placeholder=""
+                      data-id="2"
+                    />
+                    <i
+                    class="bi bi-plus-square-fill icon icon-base my-plus-class"
+                    data-bs-toggle="modal"
+                    data-bs-target="#fullscreenModal"
+                    data-url="url/2"
+                  ></i>
+                    <label for="item2" class="form-label"
+                      >Փաստաթղթի կատեգորիա</label
+                    >
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="item3"
+                      placeholder=""
+                      data-id="3"
+                    />
+                    <i
+                    class="bi bi-plus-square-fill icon icon-base my-plus-class"
+                    data-bs-toggle="modal"
+                    data-bs-target="#fullscreenModal"
+                    data-url="url/3"
+                  ></i>
+                    <label for="item3" class="form-label"
+                      >Մուտքի մակարդակ</label
+                    >
+                  </div>
+                </div>
+                
+                <!-- Date Input -->
+                <div class="col">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputDate2"
+                      placeholder=""
+                    />
+                    <label for="inputDate2" class="form-label"
+                      >Փաստաթուղթը մուտքագրող օ/ա</label
+                    >
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputDate2"
+                      placeholder=""
+                    />
+                    <label for="inputDate2" class="form-label"
+                      >Փաստաթուղթը գրանցման համար</label
+                    >
+                  </div>
+                </div>
+                
+                <div class="col">
+                  <div class="form-floating input-date-wrapper">
+                    <!-- <div class="input-date-wrapper"> -->
+                    <label for="inputDate1" role="value"></label>
+                    <input type="text" hidden role="store" />
+                    <input
+                      type="date"
+                      placeholder=""
+                      id="inputDate1"
+                      class="form-control"
+                      placaholder=""
+                    />
+                    <label for="inputDate1" class="form-label"
+                      >Գրանցման ամսաթիվ</label
+                    >
+                    <!-- </div> -->
+                  </div>
+                </div>
+                <!-- Inputs -->
+                
+                <div class="col">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputDate2"
+                      placeholder=""
+                    />
+                    <label for="inputDate2" class="form-label"
+                      >Փաստաթուղթն ստացող օ/ա</label
+                    >
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputDate2"
+                      placeholder=""
+                    />
+                    <label for="inputDate2" class="form-label"
+                      >Ստորաբաժանում, որտեղ պահվում են նախնական նյութեր</label
+                    >
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputDate2"
+                      placeholder=""
+                    />
+                    <label for="inputDate2" class="form-label"
+                      >Նաղնական նյութերի պահպանման տեղ</label
+                    >
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputDate2"
+                      placeholder=""
+                    />
+                    <label for="inputDate2" class="form-label"
+                      >Փաստաթղթի համառոտ բովանդակություն</label
+                    >
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputDate2"
+                      placeholder=""
+                    />
+                    <label for="inputDate2" class="form-label"
+                      >Տեղեկությունը վերաբերվում է ․․․թ</label
+                    >
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputDate2"
+                      placeholder=""
+                    />
+                    <label for="inputDate2" class="form-label"
+                      >Տեղեկության աղբյուր</label
+                    >
+                  </div>
+                </div>
+                
+                <div class="col">
+                   <div class="tegs-div">
+                    <div class="Myteg">
+                      <span>AAAAAA</span>
+                      <span>X</span>
+                    </div>
+                    <div class="Myteg">
+                      <span>AAAAAA</span>
+                      <span>X</span>
+                    </div>
+                  </div> 
+                  <div class="form-floating">
+                    
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="item4"
+                      placeholder=""
+                      data-id="4"
+                      list="brow"
+                    />
+                    <i
+                    class="bi bi-plus-square-fill icon icon-base my-plus-class"
+                    data-bs-toggle="modal"
+                    data-bs-target="#fullscreenModal"
+                    data-url="url/4"
+                  ></i>
+                    <label for="item4" class="form-label"
+                      >Երկիր, որին վերաբերում է տեղեկությունը</label
+                    >
+                  </div>
+
+                  <datalist id="brow" style="width: 500px;">
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                    <option value="5"></option>
+                  </datalist>
+                </div>
+                <div class="col">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputDate2"
+                      placeholder=""
+                    />
+                    <label for="inputDate2" class="form-label"
+                      >Թեմատիկայի անվանումը</label
+                    >
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputPassportNumber1"
+                      placeholder=""
+                      name="user_name"
+                    />
+                    <label for="inputPassportNumber1" class="form-label"
+                      >Փաստաթղթի Վերնագիրը</label
+                    >
+                  </div>
+                </div>
+                
+                <div class="col">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputPassportNumber1"
+                      placeholder=""
+                    />
+                    <label for="inputPassportNumber1" class="form-label"
+                      >Փաստաթղթի բովանդակություն</label
+                    >
+                  </div>
+                </div>
+                <div
+                class="col d-flex align-items-center gap-3 modal-toggle-box flex-wrap my-date-class"
+                >
+                <span class="form-label">Վիդեեյի առկայություն</span>
+                
+                <div class="form-check my-formCheck-class">
+                  <input class="form-check-input" type="checkbox" id="checkAll"/>
+                </div>
+                </div>
+                  <h6>ԱՆՁ (ՔԱՆԱԿԸ) ։ 0</h6>
+                <div class="col">
+                  <div class="form-floating">
+                    <select class="form-select">
+                      <option selected disabled value="" hidden></option>
+                      <option value="1">One</option>
+                    </select>
+                    <label class="form-label"
+                      >Պարունակում է տեղեկատվություն</label
+                    >
+                  </div>
+                </div>
+                
+               
+                
+              </div>
+
+              <!-- ######################################################## -->
+              <!-- Submit button -->
+              <!-- ######################################################## -->
+            </form>
+            <!-- Vertical Form -->
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- End #main -->
+
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- ########################################################################### -->
+    <!-- ############################## Modals #################################### -->
+    <!-- ########################################################################### -->
+
+    <!-- fullscreenModal -->
+    <div
+      class="modal fade my-modal"
+      id="fullscreenModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <form id="addNewInfoBtn">
+              <div class="form-floating">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="addNewInfoInp"
+                  placeholder=""
+                />
+                <label for="item21" class="form-label"
+                  >Ֆիլտրացիա</label
+                >
+              </div>
+
+              <button type="submit" class="btn btn-primary">Ավելացնել նոր գրանցում</button>
+              
+
+            </form>
+          </div>
+          <div class="modal-body">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th class="numbering" scope="col">#</th>
+                  <th scope="col">Անվանում</th>
+                  <th scope="col" class="td-xs"></th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td class="inputName">ggg</td>
+                    <td>
+                      <button type="button" class="addInputTxt btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Ավելացնել</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td class="inputName">fff</td>
+                    <td>
+                      <button type="button" class="addInputTxt btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Ավելացնել</button>
+                    </td>
+                  </tr>
+              </tbody>
+              </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="errModal" class="error-modal">
+      <div class="error-modal-info">
+          <p>soryyyyyy</p>
+          <button type="button" class="addInputTxt btn btn-primary my-close-error">Լավ</button>
+      </div>
+    </div>
+
+    <!-- ########################################################################### -->
+    <!-- ########################################################################### -->
+    <!-- ########################################################################### -->
+
+    <!-- Vendor JS Files -->
+    <script src="../../assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="../../assets/vendor/echarts/echarts.min.js"></script>
+    <script src="../../assets/vendor/quill/quill.min.js"></script>
+    <script src="../../assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="../../assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Main JS Files -->
+    <script src="../../assets/js/main/main.js"></script>
+    <script src="../../assets/js/main/helper.js"></script>
+    <script src="../../assets/js/main/input-date.js"></script>
+    <script src="../../assets/js/main/upload-file.js"></script>
+    <script src="../../assets/js/main/select.js"></script>
+    <script src="../../assets/js/main/input.js"></script>
+
+    <!-- Current JS Files -->
+    <script type="module" src="../new-user-page/new-user.js"></script>
+  </body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../../assets/img/favicon.png" rel="icon" />
+    <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect" /> 
+     <!-- <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />  -->
+     <link rel="stylesheet" href="../../assets/vendor/fonts/fonts.googleapis.css" /> 
+
+    Vendor CSS Files
+     <link
+      href="../../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+     <link
+      href="../../assets/vendor/boxicons/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="../../assets/vendor/quill/quill.snow.css" rel="stylesheet" />
+    <link href="../../assets/vendor/quill/quill.bubble.css" rel="stylesheet" />
+    <link href="../../assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link
+      href="../../assets/vendor/simple-datatables/style.css"
+      rel="stylesheet"
+    /> 
+
+    <!-- Main CSS Files -->
+    <link href="../../../assets/css/main/style.css" rel="stylesheet" />
+    <link href="../../assets/css/main/index.css" rel="stylesheet" />
+    <link href="../../assets/css/main/input-date.css" rel="stylesheet" />
+    <link href="../../assets/css/main/upload-file.css" rel="stylesheet" />
+    <link href="../../assets/css/main/select.css" rel="stylesheet" />
+    <link href="../../assets/css/main/input.css" rel="stylesheet" />
+    <!-- Current page's CSS -->
+    <link href="../../assets/css/other/new-user.css" rel="stylesheet" />
+</head>
+<body class="toggle-sidebar">
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+        <ul class="sidebar-nav" id="sidebar-nav">
+          <!-- <li class="nav-item">
+            <a class="nav-link collapsed" href="index.html">
+              <i class="bi bi-grid"></i>
+              <span>Users</span>
+            </a>
+          </li> -->
+  
+          <li class="nav-item">
+            <a
+              class="nav-link collapsed"
+              data-bs-target="#components-nav"
+              data-bs-toggle="collapse"
+              href="#"
+            >
+              <i class="bi bi-menu-button-wide" title="Կարգավորումներ"></i><span>Կարգավորումներ</span
+              ><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul
+              id="components-nav"
+              class="nav-content collapse"
+              data-bs-parent="#sidebar-nav"
+            >
+              <li>
+                <a href="components-alerts.html">
+                  <i class="bi bi-person" title="Օգտատերեր"></i><span>Օգտատերեր</span>
+                </a>
+              </li>
+              <li>
+                <a href="components-alerts.html">
+                  <i class="bi bi-person-gear" title="Դերեր"></i><span>Դերեր</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link collapsed"
+              data-bs-target="#components-nav1"
+              data-bs-toggle="collapse"
+              href="#"
+            >
+              <i class="bi bi-menu-button-wide" title="Տվյալներրի մուտք"></i><span>Տվյալներրի մուտք</span
+              ><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul
+              id="components-nav1"
+              class="nav-content collapse"
+              data-bs-parent="#sidebar-nav"
+            >
+              <li>
+                <a href="components-alerts.html">
+                  <i class="bi bi-person" title="Անձեր"></i><span>Անձեր</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- End Components Nav -->
+  
+          <li class="nav-item">
+            <a
+              class="nav-link collapsed"
+              data-bs-toggle="collapse"
+              href="#"
+            >
+              <i class="bi bi-card-checklist" title="Տվյալներրի մուտքագրում Ֆայլերի միջոցով"></i><span>Տվյալներրի մուտքագրում</span>
+            </a>
+          </li>
+  
+          <!-- End file upload Page Nav -->
+        </ul>
+      </aside>
+      <!-- End Sidebar-->
+      <div class="nav-top">
+          <div class="toggle-sidebar-btn-wrapper">
+             <i class="bi bi-list toggle-sidebar-btn"></i>
+          </div>
+          <div class="nav-top-right">
+              <div class="log-out-div">
+                  <span class="log-out-icon"><i class="bi bi-person"></i></span>
+                  <div class="log-out-block">
+                      <div class="user">
+                        <h3>Անուն Ազգանուն</h3>
+                        <span>Ադմինիստրատոր</span>
+                      </div>
+                      <a href="#">
+                        <i class="bi bi-box-arrow-right"></i>
+                        Դուրս Գալ
+                      </a>
+                  </div>
+              </div>
+              <select class="form-select" name="select" id="select">
+                <option value="arm">Հայերեն</option>
+                <option value="rus">Руский</option>
+            </select>
+          </div>
+      </div>
+      <!-- end nav-top -->
+
+    <main id="main" class="main">
+        <div class="pagetitle-wrapper">
+            <div class="pagetitle">
+              <h1>Անձ</h1>
+              <nav>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item active">Տվյալների մուտքագրում ֆայլերի միջոցով</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+          <!-- End Page Title -->
+          
+          <section class="section">
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <div
+                    class="d-flex justify-content-between align-items-center my-3"
+                  ></div>
+    
+                  <form class="row g-3 needs-validation myclass" novalidate>
+                    <h4>Տեքստային Ֆայլ</h4>
+                    <div class="file-upload-container">
+                      <input
+                        type="file"
+                        data-href-type=""
+                        class="file-upload"
+                        data-render-type="none"
+                        multiple
+                        hidden
+                        accept=".doc,.docx"
+                      />
+                      <label class="file-upload-btn btn btn-secondary h-fit w-fit my-class-upload-btn">
+                        Բեռնել
+                      </label>
+                      <div class="file-upload-content"></div>
+                    </div>
+    
+                    <div class="col-12 my-btn-class">
+                      <button class="btn btn-primary" type="submit">
+                        Առաջ
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <div
+                    class="d-flex justify-content-between align-items-center my-3"
+                  ></div>
+    
+                  <form class="row g-3 needs-validation myclass uploadFormClass" novalidate>
+                    <h4>Աղյուսակային Ֆայլ</h4>
+                    
+                    <div class="my-radio-btns-class">
+                      <input type="radio" id="contactChoice1" name="contact" value="email" />
+                      <label for="contactChoice1">Հայերեն</label>
+                
+                      <input type="radio" id="contactChoice2" name="contact" value="phone" />
+                      <label for="contactChoice2">Ռուսերեն</label>
+                
+                      <input type="radio" id="contactChoice3" name="contact" value="mail" />
+                      <label for="contactChoice3">Անգլերեն</label>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="form-floating myFormValid">
+                        <div class="my-inp-div">
+                              <input
+                              type="number"
+                              class="form-control"
+                              required
+                              placeholder=""
+                              name="numbering"
+                              /> 
+                              <span>Համարակալում</span>
+                        </div>
+                        <div class="invalid-feedback">
+                          Խնդրում ենք մուտքագրեք սունյակի համարը։
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="form-floating">
+                      <div class="my-inp-div">
+                        <input
+                        type="number"
+                        class="form-control myFormValid"
+                        required
+                        placeholder=""
+                        name="name"
+                        min="1"
+                        max="9"
+                      /> 
+                      <span>Անուն</span>
+                      </div>   
+                        <div class="invalid-feedback">
+                            Խնդրում ենք մուտքագրեք սունյակի համարը։
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <div class="my-inp-div">
+                          <input
+                          type="number"
+                          class="form-control myFormValid"
+                          required
+                          placeholder=""
+                          name="lastName"
+                          min="1"
+                          max="9"
+                        />
+                        <span>Ազգանուն</span>
+                        </div>    
+                        <div class="invalid-feedback">
+                          Խնդրում ենք մուտքագրեք սունյակի համարը։
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="form-floating">
+                       <div class="my-inp-div">
+                        <input
+                        type="number"
+                        class="form-control myFormValid"
+                        required
+                        placeholder=""
+                        name="fatherName"
+                        min="1"
+                        max="9"
+                      />
+                      <span>Հայրանուն</span>
+                       </div>
+                        <div class="invalid-feedback">
+                          Խնդրում ենք մուտքագրեք սունյակի համարը։
+                        </div>
+                      </div>
+                    </div>
+                    
+                    
+                    <div class="col-12">
+                      <div class="form-floating ">
+                        <div class="my-inp-div">
+                          <input
+                          type="number"
+                          class="form-control myFormValid"
+                          required
+                          placeholder=""
+                          name="date"
+                          min="1"
+                          max="9"
+                        /> 
+                        <span>Տարեթիվ</span>
+                        </div>   
+                        <div class="invalid-feedback">
+                          Խնդրում ենք մուտքագրեք սունյակի համարը։
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <div class="my-inp-div">
+                          <input
+                          type="number"
+                          class="form-control myFormValid"
+                          required
+                          placeholder=""
+                          name="dateBirth"
+                          min="1"
+                          max="9"
+                        /> 
+                        <span>Ծննդյան Տարեթիվ</span>
+                        </div>   
+                        <div class="invalid-feedback">
+                          Խնդրում ենք մուտքագրեք սունյակի համարը։
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="file-upload-container my-upload-btn">
+                      <input
+                        type="file"
+                        data-href-type=""
+                        class="file-upload"
+                        data-render-type="none"
+                        multiple
+                        hidden
+                        accept=".doc,.docx"
+                      />
+                      <label class="file-upload-btn btn btn-secondary h-fit w-fit ">
+                        Բեռնել
+                      </label>
+                      <div class="file-upload-content"></div>
+                    </div>
+    
+                    <div class="col-12 my-btn-class">
+                      <button class="btn btn-primary" type="submit">
+                        Առաջ
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+    </main>
+
+
+         <!-- ########################################################################### -->
+    <!-- ########################################################################### -->
+    <!-- ########################################################################### -->
+
+    <!-- Vendor JS Files -->
+    <script src="../../assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="../../assets/vendor/echarts/echarts.min.js"></script>
+    <script src="../../assets/vendor/quill/quill.min.js"></script>
+    <script src="../../assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="../../assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Main JS Files -->
+    <script src="../../assets/js/main/main.js"></script>
+    <script src="../../assets/js/main/helper.js"></script>
+    <script src="../../assets/js/main/input-date.js"></script>
+    <script src="../../assets/js/main/upload-file.js"></script>
+    <script src="../../assets/js/main/select.js"></script>
+    <script src="../../assets/js/main/input.js"></script>
+
+    <!-- Current JS Files -->
+    <script src="../../assets/js/other/new-user.js"></script>
+    <script src='../file-uplpad-page/fileUpload.js'></script>
+</body>
+</html>
