@@ -143,12 +143,17 @@
 
 /* button delete edit css */
 
-td button {
+
+td button, td a i  {
+  font-size: 20px;
   border: none;
+  background-color: transparent;
+  color: #787878;
+  
 }
-td button:hover {
-  background-color: #6a6a6a;
-  color: white;
+td button:hover , td a I:hover{
+  color: black;
+ 
 }
 
 /* range input css */

@@ -103,7 +103,7 @@ function onMauseScrolTh(e) {
   createResizableTable(document.getElementById("resizeMe"));
 }
 
-// active isActive js //
+// isActive notActive js // 
 
 const allRangeInp = document.querySelectorAll(".rangeInput");
 allRangeInp.forEach((el) => {
@@ -118,8 +118,20 @@ allRangeInp.forEach((el) => {
       }
     };
 
+
     confirm.onclick = () => {
-      e.target.value = e.target.value
+      let statusForm = document.querySelector('#status_form')
+      let newInp = document.createElement('input')
+      newInp.taype = 'range'
+      newInp.min = '0'
+      newInp.max = '1'
+      newInp.setAttribute('value' ,e.target.value)
+      newInp.style.display = 'none'
+      let dataId = e.target.getAttribute('data-id')
+      newInp.setAttribute('data-id',dataId)
+      statusForm.appendChild(newInp)
+      statusForm.action = `aaa/url/${dataId}`
+      console.log(statusForm);
     }
 
   });
